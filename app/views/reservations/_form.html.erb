@@ -1,0 +1,169 @@
+
+<%= form_for([@item, @item.reservations.new]) do |f| %>
+
+    <div class="row" id="date_pickers">
+        <div class="col-md-4 text-center"></div>
+		<div class="col-md-2 text-center">
+			<label>Pickup </label>
+            <i class="fa fa-calendar" aria-hidden="true"></i> 
+            <% if(!user_signed_in?) %>
+			 <%= f.text_field :start_date, placeholder: 'Must Sign-in', class: 'form-control' %>
+            <% else %>
+             <%= f.text_field :start_date, placeholder: 'Start Date', class: 'form-control' %>
+            <% end %>
+		</div>
+		<div class="col-md-2 text-center">
+			<label>Return </label>
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+			<% if(!user_signed_in?) %>
+			 <%= f.text_field :end_date, placeholder: 'Must Sign-in', class: 'form-control' %>
+            <% else %>
+             <%= f.text_field :end_date, placeholder: 'End Date', class: 'form-control' %>
+            <% end %>		
+		</div>
+        <div class="col-md-4 text-center"></div>
+	</div>
+
+    <%= f.hidden_field :item_id, value: @item.id %>
+    <%= f.hidden_field :price, value: @item.price %>
+    <%= f.hidden_field :total, id: 'reservation_total' %>
+    
+    <h4><span id="message"></span></h4>
+
+    <div class="row">
+        <div class="col-md-4 text-center"></div>
+        <div class="col-md-4 text-center">
+            <div id="preview" style="display: none">
+                <table class="reservation-table" >
+                    <tbody>
+                        <tr>
+                            <td>Day(s)</td>
+                            <td><span id="reservation_days"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Total Cost</td>
+                            <td>$<span id="reservation_sum"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4 text-center"></div>
+    </div>
+
+	<br>
+	<%= f.submit "Book Now", id: "btn_book", class: "btn btn-primary", disabled: 'true' %>
+
+<% end %>
+
+
+
+<script type="text/javascript">
+    
+	$(function() {
+
+		unavailableDates = [];
+
+		$.ajax({
+			url: '/preload',
+			data: {'item_id': <%= @item.id %>},
+			dataType: 'json',
+			success: function(data) {
+                console.log(data);
+				$.each(data, function(arrID, arrValue) {
+					for(var d = new Date(arrValue.start_date); d <= new Date(arrValue.end_date); d.setDate(d.getDate() + 1)) {
+                        unavailableDates.push(d.getUTCFullYear() + "-" + (d.getUTCMonth()+1) + "-" + d.getUTCDate());
+                        console.log(unavailableDates);
+					}
+				});
+
+				$('#reservation_start_date').datetimepicker({
+                    format: 'M/D/Y',
+                    minDate: new Date(),
+					disabledDates: unavailableDates,
+				});
+
+				$('#reservation_end_date').datetimepicker({
+					format: 'M/D/Y',
+					useCurrent: false,
+					disabledDates: unavailableDates
+				});
+                
+                
+                $('#reservation_start_date').on('dp.change', function(selected) {
+                        $('#reservation_end_date').attr('disabled', false);
+                        $('#preview').hide();
+
+                   
+                });
+                
+
+                $('#reservation_end_date').on('dp.change', function(selected) {
+                        <% puts 'End Date has been selected' %>
+						var start_date = new Date($('#reservation_start_date').data('date'));
+						var end_date = new Date($(this).data('date'));
+						var days = (end_date - start_date)/1000/60/60/24 + 1
+
+						var input = {
+							'start_date': start_date,
+							'end_date': end_date,
+							'item_id': <%= @item.id %>
+						}
+                            
+                        <% puts 'Variables have been set' %>
+                            
+						$.ajax({
+							url: '/preview',
+							data: input,
+							success: function(data) {
+                                console.log('Item status: ' + <%= @item.active %>);
+								if (data.conflict) {
+
+									$('#message').text('This date range is not available.');
+									$('#preview').hide();
+									$('#btn_book').attr('disabled', true);
+
+								} else if (<%= @item.active %> == false) {
+                                    
+                                    $('#message').text('The owner has deactivated this listing.');
+									$('#preview').hide();
+									$('#btn_book').attr('disabled', true);
+                                    
+                                } else {
+
+									$('#preview').show();
+                                    $('#message').text('Item is available!');
+									$('#btn_book').attr('disabled', false);
+
+									var total = days * <%= @item.price %> 
+									$('#reservation_days').text(Math.round((days + 0.00001) * 100) / 100);
+									$('#reservation_sum').text(Math.round((total + 0.00001) * 100) / 100);
+									$('#reservation_total').val(Math.round((total + 0.00001) * 100) / 100);
+								}
+							}
+                            <% puts 'AJAX has been run' %>
+                        });
+                   
+                });
+
+                
+                $('#reservation_start_date').on('dp.change', function (e) {
+                    $('#reservation_end_date').data('DateTimePicker').minDate(e.date);
+                });
+                
+        
+                $('#reservation_end_date').on('dp.change', function (e) {
+                    $('#reservation_start_date').data('DateTimePicker').maxDate(e.date);
+                });
+                
+                    
+			}
+		});	
+
+	});
+     
+    
+    
+</script>
+
+

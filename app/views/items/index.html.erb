@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-md-3">
+        <ul class="sidebar-list">
+            <li class="btn btn-primary wide"><%= link_to "Your Listings", items_path, class: "sidebar-link active" %></li>
+            <li class="btn btn-primary wide"><%= link_to "Reservations for Your Items", your_reservations_path, class: "sidebar-link wide" %></li>
+            <li class="btn btn-primary wide"><%= link_to "Your Rental History", your_rental_history_path, class: "sidebar-link" %></li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-defaul">
+            <div class="panel-heading">
+                <h2>Your Listings</h2>
+            </div>
+            <div class="panel-body">
+                
+                <% @items.each do |item| %>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <% if item.photos.count == 0 %>
+                                <%= image_tag "noimage.png", class: "img-responsive" %>
+                            <% else %>
+                                <%= image_tag item.photos[0].image.url(:thumb) if item.photos.length > 0 %>
+                            <% end %>
+                        </div>
+                        <div class="col-md-4">
+                            <h4><%= item.listing_name %></h4>
+                            <h5>$<%= sprintf('%.2f', item.price) %> per day</h5> 
+                            <span id="avg_rating_<%= item.id %>"></span> (<%= item.reviews.count %>)
+                        </div>
+                        <div class="col-md-2 left">
+                            <% if item.active == true %>
+                                <h4><i class="fa fa-check-circle" aria-hidden="true"></i> Active</h4>
+                            <% else %>
+                                <h4><i class="fa fa-times-circle" aria-hidden="true"></i> <i>Inactive</i></h4>
+                            <% end %>
+                        </div>
+                        <div class="col-md-2 right">
+                            <%=link_to "View", item_path(item), class: "btn btn-primary" %><br><br>
+                        </div>
+                        <div class="col-md-2 right">
+                            <%=link_to "Update", edit_item_path(item), class: "btn btn-primary" %>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                    <script>
+                        $('#avg_rating_<%= item.id %>').raty({
+                            path: '/stars',
+                            readOnly: true,
+                            score: <%= item.average_rating %>
+                        });
+                    </script>
+                
+                <% end %>
+                
+            </div>
+        </div>
+    </div>
+</div>

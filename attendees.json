@@ -1,0 +1,760 @@
+[{
+    'firstName': 'Cameron',
+    'lastName': 'Nielsen',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3372,
+    'registrantKey': 4275133585737977611,
+    'email': 'Cameron.nielsen@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:05:30Z',
+        'joinTime': '2017-01-13T21:09:18Z'
+    }]
+}, {
+    'firstName': 'Cort',
+    'lastName': 'McGinty',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 670,
+    'registrantKey': 6539678938212342787,
+    'email': 'Cort.mcginty@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T21:13:18Z',
+        'joinTime': '2017-01-13T21:02:08Z'
+    }]
+}, {
+    'firstName': 'don',
+    'lastName': 'parker',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 443,
+    'registrantKey': 3020986642631418883,
+    'email': 'Don.Parker@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T21:03:38Z',
+        'joinTime': '2017-01-13T20:56:15Z'
+    }]
+}, {
+    'firstName': 'madison',
+    'lastName': 'baxter',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 2682,
+    'registrantKey': 7005141792668759299,
+    'email': 'Madison.baxter@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:22Z',
+        'joinTime': '2017-01-13T21:17:40Z'
+    }]
+}, {
+    'firstName': 'madison',
+    'lastName': 'baxter',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 31,
+    'registrantKey': 7005141792668759299,
+    'email': 'Madison.baxter@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T21:17:19Z',
+        'joinTime': '2017-01-13T21:16:48Z'
+    }]
+}, {
+    'firstName': 'Tara',
+    'lastName': 'Drago',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3618,
+    'registrantKey': 2998357593820265219,
+    'email': 'Tara.Drago@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:03:17Z',
+        'joinTime': '2017-01-13T21:02:59Z'
+    }]
+}, {
+    'firstName': 'Albert',
+    'lastName': 'Laino',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3841,
+    'registrantKey': 7869733965077141763,
+    'email': 'albert.laino@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:04:24Z',
+        'joinTime': '2017-01-13T21:00:23Z'
+    }]
+}, {
+    'firstName': 'Alice',
+    'lastName': 'Strong',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3697,
+    'registrantKey': 5758931124491407363,
+    'email': 'alice.strong@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:04:01Z',
+        'joinTime': '2017-01-13T21:02:24Z'
+    }]
+}, {
+    'firstName': 'Andrew',
+    'lastName': 'Lewin',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3790,
+    'registrantKey': 1510178501230095619,
+    'email': 'andrew.lewin@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:06:06Z',
+        'joinTime': '2017-01-13T21:02:56Z'
+    }]
+}, {
+    'firstName': 'Ari',
+    'lastName': 'Perez',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3782,
+    'registrantKey': 1615311604054743811,
+    'email': 'ari.perez@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:03:19Z',
+        'joinTime': '2017-01-13T21:00:17Z'
+    }]
+}, {
+    'firstName': 'Ashley',
+    'lastName': 'Carroll',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3548,
+    'registrantKey': 8546653796275621635,
+    'email': 'ashley.carroll@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:31Z',
+        'joinTime': '2017-01-13T21:03:23Z'
+    }]
+}, {
+    'firstName': 'ben',
+    'lastName': 'caldwell',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3922,
+    'registrantKey': 7655760206218861059,
+    'email': 'ben.caldwell@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:27Z',
+        'joinTime': '2017-01-13T20:57:05Z'
+    }]
+}, {
+    'firstName': 'bill',
+    'lastName': 'busch',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3733,
+    'registrantKey': 1671915562164276483,
+    'email': 'bill.busch@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:27Z',
+        'joinTime': '2017-01-13T21:00:14Z'
+    }]
+}, {
+    'firstName': 'Borja',
+    'lastName': 'Gonzalez',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 4041,
+    'registrantKey': 7423412508548846339,
+    'email': 'borja.gonzalez@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:03:17Z',
+        'joinTime': '2017-01-13T20:55:56Z'
+    }]
+}, {
+    'firstName': 'Brandon',
+    'lastName': 'Murdoch',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 6322,
+    'registrantKey': 276392314446849283,
+    'email': 'brandon.murdoch@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:49:05Z',
+        'joinTime': '2017-01-13T21:03:43Z'
+    }]
+}, {
+    'firstName': 'Brett Hill',
+    'lastName': '.',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 78,
+    'registrantKey': 6494725405310447368,
+    'email': 'brett.hill@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T20:44:49Z',
+        'joinTime': '2017-01-13T20:43:31Z'
+    }]
+}, {
+    'firstName': 'Brian',
+    'lastName': 'Rooney',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 439,
+    'registrantKey': 8313960851954817036,
+    'email': 'brian.rooney@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T21:31:02Z',
+        'joinTime': '2017-01-13T21:23:43Z'
+    }]
+}, {
+    'firstName': 'Brian',
+    'lastName': 'Stien',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 4061,
+    'registrantKey': 68719856727284227,
+    'email': 'brian.stien@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:03:39Z',
+        'joinTime': '2017-01-13T20:55:58Z'
+    }]
+}, {
+    'firstName': 'Brion',
+    'lastName': 'Johnson',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 4298,
+    'registrantKey': 4347937748171020043,
+    'email': 'brion.johnson@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:07:43Z',
+        'joinTime': '2017-01-13T20:56:05Z'
+    }]
+}, {
+    'firstName': 'Casi',
+    'lastName': 'W',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 5328,
+    'registrantKey': 2447758454513841155,
+    'email': 'casi.woodcox@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:37:04Z',
+        'joinTime': '2017-01-13T21:08:16Z'
+    }]
+}, {
+    'firstName': 'Christopher',
+    'lastName': 'Pereira',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3789,
+    'registrantKey': 4820075737719430669,
+    'email': 'chris.pereira@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T21:59:15Z',
+        'joinTime': '2017-01-13T20:56:06Z'
+    }]
+}, {
+    'firstName': 'Chris',
+    'lastName': 'Robbins',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3496,
+    'registrantKey': 8629341468730902275,
+    'email': 'chris.robbins@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:31Z',
+        'joinTime': '2017-01-13T21:04:15Z'
+    }]
+}, {
+    'firstName': 'Christie',
+    'lastName': 'Atkinson',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 1542,
+    'registrantKey': 288956433817964803,
+    'email': 'christielatkinson@gmail.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:03:13Z',
+        'joinTime': '2017-01-13T21:37:31Z'
+    }]
+}, {
+    'firstName': 'Craig',
+    'lastName': 'Andrew',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3350,
+    'registrantKey': 5200464979488227075,
+    'email': 'craig.andrew@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:16Z',
+        'joinTime': '2017-01-13T21:06:26Z'
+    }]
+}, {
+    'firstName': 'Cris',
+    'lastName': 'Chirinos',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 4076,
+    'registrantKey': 8834322321985436675,
+    'email': 'cristian.chirinos@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:04:31Z',
+        'joinTime': '2017-01-13T20:56:35Z'
+    }]
+}, {
+    'firstName': 'Danny',
+    'lastName': 'Anderson',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 484,
+    'registrantKey': 7183068062810931979,
+    'email': 'danny.anderson@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:22Z',
+        'joinTime': '2017-01-13T21:54:18Z'
+    }]
+}, {
+    'firstName': 'Denna',
+    'lastName': 'Lawrence',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3996,
+    'registrantKey': 4389913803584621827,
+    'email': 'denna.lawrence@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:29Z',
+        'joinTime': '2017-01-13T20:55:53Z'
+    }]
+}, {
+    'firstName': 'Eric Fearday',
+    'lastName': '.',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3664,
+    'registrantKey': 3872625468553351943,
+    'email': 'eric.fearday@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:05:25Z',
+        'joinTime': '2017-01-13T21:04:21Z'
+    }]
+}, {
+    'firstName': 'Erik',
+    'lastName': 'Anderson',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3771,
+    'registrantKey': 1386040339919254787,
+    'email': 'erik.anderson@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:31Z',
+        'joinTime': '2017-01-13T20:59:40Z'
+    }]
+}, {
+    'firstName': 'George',
+    'lastName': 'Lambson',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 1277,
+    'registrantKey': 4237114672672875777,
+    'email': 'george.lambson@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T21:35:44Z',
+        'joinTime': '2017-01-13T21:14:27Z'
+    }]
+}, {
+    'firstName': 'Gordon',
+    'lastName': 'Pirente',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3246,
+    'registrantKey': 4810750779604459779,
+    'email': 'gordon.pirente@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:03:03Z',
+        'joinTime': '2017-01-13T21:08:57Z'
+    }]
+}, {
+    'firstName': 'Hilary',
+    'lastName': 'Candland',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3868,
+    'registrantKey': 5243635104529474819,
+    'email': 'hilary.candland@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:52Z',
+        'joinTime': '2017-01-13T20:58:24Z'
+    }]
+}, {
+    'firstName': 'Imran',
+    'lastName': 'bhatti',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3438,
+    'registrantKey': 3437073728419208961,
+    'email': 'imran.bhatti@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:59Z',
+        'joinTime': '2017-01-13T21:05:41Z'
+    }]
+}, {
+    'firstName': 'James',
+    'lastName': 'Hodges',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3626,
+    'registrantKey': 2676510749160915459,
+    'email': 'james.hodges@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:28Z',
+        'joinTime': '2017-01-13T21:02:02Z'
+    }]
+}, {
+    'firstName': 'Jared',
+    'lastName': 'Coook',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3192,
+    'registrantKey': 4265066457274132227,
+    'email': 'jared.cook@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:03:18Z',
+        'joinTime': '2017-01-13T21:10:06Z'
+    }]
+}, {
+    'firstName': 'Jared',
+    'lastName': 'Perkins',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 2176,
+    'registrantKey': 9206442136801640195,
+    'email': 'jared.perkins@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T21:37:13Z',
+        'joinTime': '2017-01-13T21:00:57Z'
+    }]
+}, {
+    'firstName': 'Jason',
+    'lastName': 'Olson',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3581,
+    'registrantKey': 5806182636695085059,
+    'email': 'jason.olson@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:37Z',
+        'joinTime': '2017-01-13T21:02:56Z'
+    }]
+}, {
+    'firstName': 'Jeff',
+    'lastName': 'Heuer',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 2294,
+    'registrantKey': 4339817854800342531,
+    'email': 'jeff.heuer@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:03:24Z',
+        'joinTime': '2017-01-13T21:25:10Z'
+    }]
+}, {
+    'firstName': 'Jennifer',
+    'lastName': 'Baguley',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 6570,
+    'registrantKey': 1316105902834582275,
+    'email': 'jennifer.baguley@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:50:33Z',
+        'joinTime': '2017-01-13T21:01:03Z'
+    }]
+}, {
+    'firstName': 'Jessica',
+    'lastName': 'Stocks',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 2698,
+    'registrantKey': 9084385351002155777,
+    'email': 'jessica.stocks@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:07:34Z',
+        'joinTime': '2017-01-13T21:22:36Z'
+    }]
+}, {
+    'firstName': 'Jessica',
+    'lastName': 'Stocks',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 1438,
+    'registrantKey': 9084385351002155777,
+    'email': 'jessica.stocks@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T21:20:29Z',
+        'joinTime': '2017-01-13T20:56:31Z'
+    }]
+}, {
+    'firstName': 'Jimmy',
+    'lastName': 'Johns',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3988,
+    'registrantKey': 1201107981685417219,
+    'email': 'joe.harman@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:50Z',
+        'joinTime': '2017-01-13T20:56:22Z'
+    }]
+}, {
+    'firstName': 'Joe',
+    'lastName': 'Tanner',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3236,
+    'registrantKey': 2464141177767720963,
+    'email': 'joe.tanner@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:03:20Z',
+        'joinTime': '2017-01-13T21:09:24Z'
+    }]
+}, {
+    'firstName': 'Joey',
+    'lastName': 'Hilton',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3783,
+    'registrantKey': 6137718377818338563,
+    'email': 'joey.hilton@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:45Z',
+        'joinTime': '2017-01-13T20:59:42Z'
+    }]
+}, {
+    'firstName': 'John',
+    'lastName': 'Atkinson',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3725,
+    'registrantKey': 8090930415818246147,
+    'email': 'john.atkinson@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:03:09Z',
+        'joinTime': '2017-01-13T21:01:04Z'
+    }]
+}, {
+    'firstName': 'Jon',
+    'lastName': 'Carstens',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 2666,
+    'registrantKey': 6878946445103127563,
+    'email': 'jon.carstens@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:48:59Z',
+        'joinTime': '2017-01-13T22:04:33Z'
+    }]
+}, {
+    'firstName': 'Jun',
+    'lastName': 'Mutaguchi',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3734,
+    'registrantKey': 9161041102667515907,
+    'email': 'jun.mutaguchi@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:03:18Z',
+        'joinTime': '2017-01-13T21:01:04Z'
+    }]
+}, {
+    'firstName': 'justin',
+    'lastName': 'thompson',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3526,
+    'registrantKey': 604212805779894275,
+    'email': 'justin.thompson@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:35Z',
+        'joinTime': '2017-01-13T21:03:49Z'
+    }]
+}, {
+    'firstName': 'Kameron',
+    'lastName': 'Bascom',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 2198,
+    'registrantKey': 7432609923315723779,
+    'email': 'kameron.bascom@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:08:10Z',
+        'joinTime': '2017-01-13T21:31:32Z'
+    }]
+}, {
+    'firstName': 'Ghost',
+    'lastName': 'rider',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3335,
+    'registrantKey': 5639484579296476931,
+    'email': 'matt.hillary@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:07:25Z',
+        'joinTime': '2017-01-13T21:11:50Z'
+    }]
+}, {
+    'firstName': 'Matt',
+    'lastName': 'Brady',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3266,
+    'registrantKey': 317192991930278915,
+    'email': 'matthew.brady@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:24Z',
+        'joinTime': '2017-01-13T21:07:58Z'
+    }]
+}, {
+    'firstName': 'Matt',
+    'lastName': 'Brady',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 554,
+    'registrantKey': 317192991930278915,
+    'email': 'matthew.brady@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T21:07:33Z',
+        'joinTime': '2017-01-13T20:58:19Z'
+    }]
+}, {
+    'firstName': 'Melanie',
+    'lastName': 'Platte',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3908,
+    'registrantKey': 4216965022581993475,
+    'email': 'melanie.platte@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:37Z',
+        'joinTime': '2017-01-13T20:57:29Z'
+    }]
+}, {
+    'firstName': 'Michael ',
+    'lastName': 'Spurrrier',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3946,
+    'registrantKey': 7368471012020545539,
+    'email': 'michael.spurrier@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:04:12Z',
+        'joinTime': '2017-01-13T20:58:26Z'
+    }]
+}, {
+    'firstName': 'Michael',
+    'lastName': 'Warkentin',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3696,
+    'registrantKey': 2645949823466792963,
+    'email': 'michael.warkentin@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T21:58:13Z',
+        'joinTime': '2017-01-13T20:56:37Z'
+    }]
+}, {
+    'firstName': 'Nathan',
+    'lastName': 'Priego',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3987,
+    'registrantKey': 4016889090698858755,
+    'email': 'nathan.priego@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:04:29Z',
+        'joinTime': '2017-01-13T20:58:02Z'
+    }]
+}, {
+    'firstName': 'Pete',
+    'lastName': 'Halenar',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 4009,
+    'registrantKey': 190509461201152781,
+    'email': 'pete.halenar@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:03:08Z',
+        'joinTime': '2017-01-13T20:56:19Z'
+    }]
+}, {
+    'firstName': 'Rachel',
+    'lastName': 'Pipkin',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3535,
+    'registrantKey': 8640909430566741507,
+    'email': 'rachel.pipkin@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:03:42Z',
+        'joinTime': '2017-01-13T21:04:47Z'
+    }]
+}, {
+    'firstName': 'Richard',
+    'lastName': 'Frost',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3454,
+    'registrantKey': 2239597813631614211,
+    'email': 'richard.frost@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:47Z',
+        'joinTime': '2017-01-13T21:05:13Z'
+    }]
+}, {
+    'firstName': 'Ryan',
+    'lastName': 'Cobb',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 2501,
+    'registrantKey': 6683555532265005825,
+    'email': 'ryan.cobb@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T21:45:28Z',
+        'joinTime': '2017-01-13T21:03:47Z'
+    }]
+}, {
+    'firstName': 'Ryan McBride',
+    'lastName': '.',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 36,
+    'registrantKey': 8273392171424411398,
+    'email': 'ryan.mcbride@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:49:02Z',
+        'joinTime': '2017-01-13T22:48:26Z'
+    }]
+}, {
+    'firstName': 'Ryan McBride',
+    'lastName': '.',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3722,
+    'registrantKey': 8273392171424411398,
+    'email': 'ryan.mcbride@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:34Z',
+        'joinTime': '2017-01-13T21:00:32Z'
+    }]
+}, {
+    'firstName': 'Scoty',
+    'lastName': 'Stobbe',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3765,
+    'registrantKey': 4663055581668419331,
+    'email': 'scoty.stobbe@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:02:15Z',
+        'joinTime': '2017-01-13T20:59:30Z'
+    }]
+}, {
+    'firstName': 'Seth',
+    'lastName': 'Skousen',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 2522,
+    'registrantKey': 3819243079513470732,
+    'email': 'seth.skousen@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:04:11Z',
+        'joinTime': '2017-01-13T21:22:09Z'
+    }]
+}, {
+    'firstName': 'Shane',
+    'lastName': 'Mount',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 4177,
+    'registrantKey': 4288657578759509005,
+    'email': 'shane.mount@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:07:55Z',
+        'joinTime': '2017-01-13T20:58:18Z'
+    }]
+}, {
+    'firstName': 'Steve',
+    'lastName': 'Newell',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 2025,
+    'registrantKey': 9210974323731785987,
+    'email': 'steve.newell@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:04:11Z',
+        'joinTime': '2017-01-13T21:30:26Z'
+    }]
+}, {
+    'firstName': 'sue',
+    'lastName': 'dumbauld',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 3562,
+    'registrantKey': 2007623949915114499,
+    'email': 'sue.dumbauld@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:08:03Z',
+        'joinTime': '2017-01-13T21:08:41Z'
+    }]
+}, {
+    'firstName': 'Victor',
+    'lastName': 'Kosanovong',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 6874,
+    'registrantKey': 7334993081978031875,
+    'email': 'victor.kosanovong@mx.com',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:53:36Z',
+        'joinTime': '2017-01-13T20:59:02Z'
+    }]
+}, {
+    'firstName': 'Yo ',
+    'lastName': 'Lo',
+    'sessionKey': 8824690,
+    'attendanceTimeInSeconds': 6834,
+    'registrantKey': 8602030699408465419,
+    'email': 'yolo@brolo.fosho',
+    'attendance': [{
+        'leaveTime': '2017-01-13T22:51:07Z',
+        'joinTime': '2017-01-13T20:57:13Z'
+    }]
+}]

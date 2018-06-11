@@ -1,0 +1,11 @@
+It's mail time, <%= @message.conversation.recipient.fullname %>!
+
+<%= @message.conversation.sender.fullname %> just sent you a message on Rentagious.com! 
+
+Message:
+<%= @message.content %>
+
+To view the full conversation and reply, follow this link: <%= @url %>
+
+Thanks!
+The Rentagious Team

@@ -1,0 +1,167 @@
+<div class="row">
+            
+    <div class="col-md-12">
+
+        <%= search_form_for @search, url: search_path do |f| %>
+
+            <div class="row">
+                <h3>Enter your search criteria:</h3><br>
+                <div class="col-md-4">
+                    <%= f.text_field :listing_name_or_summary_or_category_or_subcategory_cont, placeholder: "Keyword", class: "form-control" %>
+                </div>
+                <div class="col-md-4">
+                    <%= text_field_tag :search, params[:search], placeholder: "Address or Location", class: "form-control" %>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-4 select">
+                    <div class="form-group">
+                        <label>Category</label>
+                        <%= f.collection_select :category_eq, Category.all, :name, :name, include_blank: false, prompt: "Select...", class: "form-control" %>
+                    </div>
+                </div>
+                <div class="col-md-4 select">
+                    <div class="form-group">
+                        <label>Sub-Category</label>
+                        <%= f.grouped_collection_select :subcategory_eq,  Category.order(:name), :subcategories, :name, :name, :name, include_blank: false, prompt: "Select...", class: "form-control" %>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <%= text_field_tag :start_date, params[:start_date], placeholder: "Start Date", class: "form-control" %>
+                </div>
+                <div class="col-md-4">
+                    <%= text_field_tag :end_date, params[:start_date], placeholder: "End Date", class: "form-control" %>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <%= f.text_field :price_gteq, placeholder: "Min Price", class: "form-control" %>
+                </div>
+                <div class="col-md-4">
+                    <%= f.text_field :price_lteq, placeholder: "Max Price", class: "form-control" %>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="container">
+                        <%= f.submit "Search", class: "btn btn-primary" %>
+                    </div>                
+                </div>
+            </div>
+
+        <% end %>
+
+        <hr>
+
+        <div class="row">
+            <% @arrItems.each do |item| %>
+
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading preview">
+                            <%= link_to item_path(item) do %>
+                               <% if item.photos.count == 0 %>
+                                    <%= image_tag "noimage.png", class: "img-responsive" %>
+                                <% else %>
+                                    <%= image_tag item.photos[0].image.url(:medium), class: "img-responsive" if item.photos.length > 0 %>
+                                <% end %>
+                            <% end %>
+                        </div>
+                        <div class="panel-body">
+                            <%= link_to item.listing_name, item_path(item) %><br>
+                            $<%= sprintf('%.2f', item.price) %>/day<br>
+                            <% if defined? item.distance %>
+                                <%= item.distance.round(1) %> miles away <br> 
+                            <% else %>
+                                <%= item.address_city %>, <%= item.address_state %> <br> 
+                            <% end %>
+                            <%= image_tag avatar_url(item.user), class: "img-circle avatar-small" %>&nbsp;
+                            <span id="avg_rating_<%= item.id %>"></span> (<%= item.reviews.count %>)
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    $('#avg_rating_<%= item.id %>').raty({
+                        path: '/stars',
+                        readOnly: true,
+                        score: <%= item.average_rating %>
+                    });
+                </script>
+
+            <% end %>
+        </div>
+        
+    </div>    
+
+</div>
+        
+
+<!-- Date Picker Script -->
+<script>
+    
+	$(function() { 
+        
+        $('#start_date').datetimepicker({
+            format: 'M-D-Y',
+            minDate: new Date(),
+        });
+
+        $('#end_date').datetimepicker({
+            format: 'M-D-Y',
+            useCurrent: false
+        });
+        
+        $('#start_date').on('dp.change', function (e) {
+            $('#end_date').data('DateTimePicker').minDate(e.date);
+        });
+        $('#end_date').on('dp.change', function (e) {
+            $('#start_date').data('DateTimePicker').maxDate(e.date);
+        });
+        
+	})
+
+</script>
+
+
+<script>
+$( document ).ready(function() {
+    console.log( "document ready!" );
+
+        var $sticky = $('.sticky');
+        var $stickyrStopper = $('.sticky-stopper');
+        if (!!$sticky.offset()) { // make sure ".sticky" element exists
+
+            var generalSidebarHeight = $sticky.innerHeight();
+            var stickyTop = $sticky.offset().top;
+            var stickOffset = 0;
+            var stickyStopperPosition = $stickyrStopper.offset().top;
+            var stopPoint = stickyStopperPosition - generalSidebarHeight - stickOffset;
+            var diff = stopPoint + stickOffset;
+
+            $(window).scroll(function(){ // scroll event
+                var windowTop = $(window).scrollTop(); // returns number
+
+                if (stopPoint < windowTop) {
+                $sticky.css({ position: 'absolute', top: diff });
+                } else if (stickyTop < windowTop+stickOffset) {
+                $sticky.css({ position: 'fixed', top: stickOffset });
+                } else {
+                $sticky.css({position: 'absolute', top: 'initial'});
+                }
+                });
+        }
+    });
+</script>

@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-md-3">
+        <ul class="sidebar-list">
+            <li class="btn btn-primary wide"><%= link_to "Your Listings", items_path, class: "sidebar-link" %></li>
+            <li class="btn btn-primary wide"><%= link_to "Reservations for Your Items", your_reservations_path, class: "sidebar-link" %></li>
+            <li class="btn btn-primary wide"><%= link_to "Your Rental History", your_rental_history_path, class: "sidebar-link active" %></li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-defaul">
+            <div class="panel-heading">
+                <h2>Your Rental History</h2>
+            </div>
+            <div class="panel-body">
+                <hr>
+                <% if @rentals.length > 0 %>
+                    <% @rentals.each do |rental| %>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <%= link_to item_path(rental.item) do %>
+                                    <%= image_tag rental.item.photos[0].image.url(:thumb) if rental.item.photos.length > 0 %>
+                                <% end %>
+                                <br>
+                                <%= link_to item_path(rental.item) do %>
+                                    <%= rental.item.listing_name %>
+                                <% end %>
+                            </div>	
+                            <div class="col-md-3">
+                                <%= link_to user_path(rental.item.user) do %>
+                                    <%= image_tag avatar_url(rental.item.user), class: "img-circle avatar-large" %>
+                                <% end %>
+                                <br>
+                                <%= link_to user_path(rental.item.user) do %>
+                                    <%= rental.item.user.fullname %>
+                                <% end %>
+                            </div>
+                            <div class="col-md-3">
+                                <h5><b>Pickup </b><%= rental.start_date.strftime('%D') %>
+                                <br>
+                                <b>Return </b><%= rental.end_date.strftime('%D') %></h5>
+                            </div>	
+                            <div class="col-md-3 pull-right">
+                                <h5>Total Cost: $<%= sprintf('%.2f', rental.total) %></h5>
+                                <% if rental.start_date.to_date > Date.current %>
+                                    <%= link_to "Cancel", rental, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary wide" if current_user && current_user == rental.user %>
+                                <% end %>
+                            </div>	
+                        </div>
+                        <hr>
+                    <% end %>
+                <% else %>
+                    You have not made any reservations yet.  Get out there and borrow something!
+                <% end %>
+                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    Hello <%= @reservation.item.user.fullname %>,
+    <p>
+      The following reservation for your item was cancelled:<br>
+      <ul>
+        <li>Item: <%= @reservation.item.listing_name %></li>    
+        <li>Neighbor: <%= @reservation.user.email %></li>    
+        <li>Start Date: <%= @reservation.start_date.strftime('%D') %></li>    
+        <li>End Date: <%= @reservation.end_date.strftime('%D') %></li>    
+        <li>Rental Cost: $<%= sprintf('%.2f', @reservation.total) %></li>
+        <li>Deposit: $<%= sprintf('%.2f', @reservation.item.deposit) %></li>
+      </ul>
+    </p>
+    <p>
+      To view other reservations for your items, just follow this link: <%= @url %>
+    </p>
+    <p>
+      Have a great day!<br>
+      The Rentagious Team
+    </p>
+  </body>
+</html>

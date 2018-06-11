@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-md-3">
+        <ul class="sidebar-list">
+            <li class="btn btn-primary wide"><%= link_to "Your Listings", items_path, class: "sidebar-link" %></li>
+            <li class="btn btn-primary wide"><%= link_to "Reservations for Your Items", your_reservations_path, class: "sidebar-link active" %></li>
+            <li class="btn btn-primary wide"><%= link_to "Your Rental History", your_rental_history_path, class: "sidebar-link" %></li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-defaul">
+            <div class="panel-heading">
+                <h2>Reservations for Your Items</h2>
+            </div>
+            <div class="panel-body">
+                <hr>           
+                <% @items.each do |item| %>
+                    
+                    <% item.reservations.each do |reservation| %>
+                        <% if reservation.status %>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <%= link_to item_path(reservation.item) do %>
+                                        <%= image_tag reservation.item.photos[0].image.url(:thumb) if reservation.item.photos.length > 0 %>
+                                    <% end %>
+                                    <br>
+                                    <%= link_to item_path(reservation.item) do %>
+                                        <%= reservation.item.listing_name %>
+                                    <% end %>
+                                </div>	
+                                <div class="col-md-3">
+                                    <%= link_to user_path(reservation.user) do %>
+                                        <%= image_tag avatar_url(reservation.user), class: "img-circle avatar-large" %>
+                                    <% end %>
+                                    <br>
+                                    <%= link_to user_path(reservation.user) do %>
+                                        <%= reservation.user.fullname %>
+                                    <% end %>
+                                </div>
+                                <div class="col-md-3">
+                                    <h5><b>Pickup </b><%= reservation.start_date.strftime('%D') %>
+                                    <br>
+                                    <b>Return </b><%= reservation.end_date.strftime('%D') %></h5>
+                                </div>	
+                                <div class="col-md-3 right">
+                                    <h5>Total Cost: $<%= sprintf('%.2f', reservation.total) %></h5>
+                                    <br>
+                                    <%= link_to "Send a Message", conversations_path(sender_id: current_user.id, recipient_id: reservation.user.id), method: 'post', class: "btn btn-primary wide" %>
+                                </div>	
+                            </div>
+                            <hr>
+                        <% end %>
+                    <% end %>
+                
+                <% end %>
+                
+            </div>
+        </div>
+    </div>
+</div>

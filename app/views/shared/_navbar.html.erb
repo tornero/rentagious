@@ -1,0 +1,80 @@
+<!-- "_" in filename represents a "partial view" -->
+
+<!-- Static navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		    <span class="sr-only">Toggle navigation</span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" <%= link_to "rentagious", root_path %></a>
+		</div>        
+        
+		<div id="navbar" class="navbar-collapse collapse">
+    
+          <ul class="nav navbar-nav navbar-left">
+              <li>
+                <%= link_to search_path do %>
+                    <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+                <% end %>
+              </li>
+          </ul>
+            
+		  <ul class="nav navbar-nav navbar-right">
+		    
+			<% if(!user_signed_in?) %>
+
+				<li><%= link_to "Log In", new_user_session_path %></li>
+				<li><%= link_to "Sign Up", waiver_path %></li> <!-- new_user_registration_path -->
+			
+			<% else %>
+				
+				<li class="dropdown">
+			      
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+					<%= image_tag avatar_url(current_user), class: "img-circle avatar-small" %>&nbsp;
+			      	<%= current_user.fullname %> <span class="caret"></span>
+			      </a>
+ 
+			      <ul class="dropdown-menu">
+			        <li class="dropdown-header">Your Neighbors' Stuff</li>
+                    <li><%= link_to "Search Listings", search_path %></li>
+                    <li><%= link_to "Stuff I've Rented", your_rental_history_path %></li>
+			        <li role="separator" class="divider"></li>
+			        <li class="dropdown-header">Your Stuff</li>
+			        <li><%= link_to "Manage My Listings", items_path %></li>
+			        <li><%= link_to "Reservations", your_reservations_path %></li>
+                    <li role="separator" class="divider"></li>
+                    <li><%= link_to "View Profile", user_path(current_user.id) %></li>
+                    <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+                    <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+			      </ul>
+
+			    </li>
+			
+			<% end %>
+            
+            <li>
+                <%= link_to new_item_path do %>
+                    <i class="fa fa-plus" aria-hidden="true"></i> List Your Stuff
+                <% end %>
+            </li>
+            <li>
+                <%= link_to conversations_path do %>
+                    <i class="fa fa-envelope-o"></i> Messages
+                <% end %>
+            </li>
+            <li>
+                <%= link_to about_path do %>
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> About
+                <% end %>
+            </li>
+		    
+		  </ul>
+		  
+		</div><!--/.nav-collapse -->
+	</div>
+</nav>

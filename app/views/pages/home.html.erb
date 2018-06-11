@@ -1,0 +1,171 @@
+<div class="text-center">
+	<h2>Explore What's Near You</h2>
+	<p>Enter your address or general location to see what's available near you!</p>
+</div>
+
+<%= form_tag search_path, method: :get do %>
+    <div class="row">
+        <div class="col-md-3">
+            <%= text_field_tag :listing_name_cont, params[:listing_name_cont], placeholder: "Enter a Keyword...", class: "form-control" %>
+        </div>
+        <div class="col-md-3">
+            <%= text_field_tag :search, params[:search], placeholder: "Enter a Location...", class: "form-control" %>
+        </div>
+        <div class="col-md-2">
+            <%= text_field_tag :start_date, params[:start_date], placeholder: "Start Date", class: "form-control" %>
+        </div>
+        <div class="col-md-2">
+            <%= text_field_tag :end_date, params[:end_date], placeholder: "End Date", class: "form-control" %>
+        </div>
+        <div class="col-md-2">
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+        </div>
+    </div>
+<% end %>
+
+<br>
+
+<div class="text-center">
+	<h2>Let's Do This!</h2>
+	<p>Choose from the most popular rental categories.</p>
+</div>
+
+<br>
+
+<div class="row">
+	<div class="col-md-3 col-sm-6">
+        <a href="http://www.rentagious.com/search?utf8=✓&q%5Bcategory_eq%5D=Dirt">
+            <div class="discovery-card" style="background-image: url('https://s3-us-west-1.amazonaws.com/rentagious/photos/web_assets/dirt.jpg')">
+                <div class="va-container">
+                    <div class="va-middle text-center">
+                        <h2><strong>DIRT</strong></h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+	</div>
+
+	<div class="col-md-3 col-sm-6">
+        <a href="http://www.rentagious.com/search?utf8=✓&q%5Bcategory_eq%5D=Land">
+            <div class="discovery-card" style="background-image: url('https://s3-us-west-1.amazonaws.com/rentagious/photos/web_assets/camping.jpg')">
+                <div class="va-container">
+                    <div class="va-middle text-center">
+                        <h2><strong>LAND</strong></h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+	</div>
+
+    <div class="col-md-3 col-sm-6">
+        <a href="http://www.rentagious.com/search?utf8=✓&q%5Bcategory_eq%5D=Snow">
+            <div class="discovery-card" style="background-image: url('https://s3-us-west-1.amazonaws.com/rentagious/photos/web_assets/snow.jpg')">
+                <div class="va-container">
+                    <div class="va-middle text-center">
+                        <h2><strong>SNOW</strong></h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+	</div>
+    
+	<div class="col-md-3 col-sm-6">
+        <a href="http://www.rentagious.com/search?utf8=✓&q%5Bcategory_eq%5D=Water">
+            <div class="discovery-card" style="background-image: url('https://s3-us-west-1.amazonaws.com/rentagious/photos/web_assets/water.jpg')">
+                <div class="va-container">
+                    <div class="va-middle text-center">
+                        <h2><strong>WATER</strong></h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+	</div>
+
+</div>
+
+<br>
+
+<div class="text-center">
+	<h2>Everything Else</h2>
+	<p>Take a peek into your neighbor's garage.</p>
+</div>
+
+<div class="row">
+
+    <% @items.each do |item| %>
+        <% if item.active == true %>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading preview">
+                        <%= link_to item_path(item) do %>
+                           <% if item.photos.count == 0 %>
+                                <%= image_tag "noimage.png", class: "img-responsive" %>
+                            <% else %>
+                                <%= image_tag item.photos[0].image.url(:medium), class: "img-responsive" if item.photos.length > 0 %>
+                            <% end %>
+                        <% end %>
+                    </div>
+                    <div class="panel-body">
+                        <%= link_to item.listing_name, item_path(item) %>&nbsp;&nbsp;<br>$<%= sprintf('%.2f', item.price) %>/day<br> 
+                        <% if defined? item.distance %>
+                            <%= item.distance.round(1) %> miles away <br> 
+                        <% else %>
+                            <%= item.address_city %>, <%= item.address_state %> <br> 
+                        <% end %>
+                        <%= image_tag avatar_url(item.user), class: "img-circle avatar-small" %>&nbsp;
+                        <span id="avg_rating_<%= item.id %>"></span> (<%= item.reviews.count %>)
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $('#avg_rating_<%= item.id %>').raty({
+                    path: '/stars',
+                    readOnly: true,
+                    score: <%= item.average_rating %>
+                });
+            </script>
+        <% end %>
+    <% end %>
+
+</div>
+
+
+
+<!-- Date Picker Script -->
+<script>
+    
+	$(function() { 
+        
+        $('#start_date').datetimepicker({
+            format: 'M-D-Y',
+            minDate: new Date(),
+        });
+
+        $('#end_date').datetimepicker({
+            format: 'M-D-Y',
+            useCurrent: false
+        });
+        
+        $('#start_date').on('dp.change', function (e) {
+            $('#end_date').data('DateTimePicker').minDate(e.date);
+        });
+        $('#end_date').on('dp.change', function (e) {
+            $('#start_date').data('DateTimePicker').maxDate(e.date);
+        });
+        
+	})
+
+</script>
+
+<!-- Google Analytics Script -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-104411934-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

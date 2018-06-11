@@ -1,0 +1,9 @@
+<p>Welcome <%= @email %>!</p> 
+
+<p>Thanks for joining your neighbors at rentagious.com! Whether you are looking to make money, save money, or help out the environment by reducing waste, we are excited to have you here!
+
+But before we set you loose, we just need you to confirm your account email through the link below:</p>
+
+<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<p><br>We're glad you're here!<br><br>The Rentagious Team</p>

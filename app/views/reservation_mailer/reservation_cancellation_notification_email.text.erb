@@ -1,0 +1,15 @@
+Hello <%= @reservation.item.user.fullname %>,
+
+The following reservation for your item was cancelled:
+
+-Item: <%= @reservation.item.listing_name %>   
+-Neighbor: <%= @reservation.user.email %>    
+-Start Date: <%= @reservation.start_date.strftime('%D') %>   
+-End Date: <%= @reservation.end_date.strftime('%D') %>   
+-Rental Cost: $<%= sprintf('%.2f', @reservation.total) %>       
+-Deposit: $<%= sprintf('%.2f', @reservation.item.deposit) %>
+    
+To view other reservations for your items, just follow this link: <%= @url %>
+
+Have a great day!
+The Rentagious Team

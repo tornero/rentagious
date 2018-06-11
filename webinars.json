@@ -1,0 +1,97 @@
+{
+    '_embedded': {
+        'webinars': [{
+            'webinarKey': '493932897625580034',
+            'webinarId': '995894011',
+            'organizerKey': '6535891104795137029',
+            'omid': '4603421378112791051',
+            'accountKey': '200000000000320653',
+            'name': 'Garbage to Gold: Enhance Your Transaction Data, Delight Your Users',
+            'subject': 'Garbage to Gold: Enhance Your Transaction Data, Delight Your Users',
+            'description': '\r\n',
+            'startTime': '2018-02-13T17:00:00Z',
+            'endTime': '2018-02-13T17:30:00Z',
+            'times': [{
+                'startTime': '2018-02-13T17:00:00Z',
+                'endTime': '2018-02-13T17:30:00Z'
+            }],
+            'webinarTimes': [{
+                'startTime': '2018-02-13T17:00:00Z',
+                'endTime': '2018-02-13T17:30:00Z'
+            }],
+            'timeZone': 'America/Denver',
+            'locale': 'en_US',
+            'status': 'UPDATED',
+            'approvalType': 'AUTOMATIC',
+            'registrationUrl': 'https://attendee.gotowebinar.com/register/493932897625580034',
+            'impromptu': False,
+            'isPasswordProtected': False,
+            'type': 'single_session',
+            'registrationSettingsKey': '12459910'
+        }, {
+            'webinarKey': '3550359718746839811',
+            'webinarId': '504054851',
+            'organizerKey': '6535891104795137029',
+            'omid': '9027896850396666627',
+            'accountKey': '200000000000320653',
+            'name': 'Data Webinar Series',
+            'subject': 'Data Webinar Series',
+            'description': '',
+            'startTime': '2018-02-27T17:00:00Z',
+            'endTime': '2018-05-08T16:30:00Z',
+            'times': [{
+                'startTime': '2018-02-27T17:00:00Z',
+                'endTime': '2018-02-27T17:30:00Z'
+            }, {
+                'startTime': '2018-03-13T16:00:00Z',
+                'endTime': '2018-03-13T16:30:00Z'
+            }, {
+                'startTime': '2018-03-27T16:00:00Z',
+                'endTime': '2018-03-27T16:30:00Z'
+            }, {
+                'startTime': '2018-04-10T16:00:00Z',
+                'endTime': '2018-04-10T16:30:00Z'
+            }, {
+                'startTime': '2018-04-24T16:00:00Z',
+                'endTime': '2018-04-24T16:30:00Z'
+            }, {
+                'startTime': '2018-05-08T16:00:00Z',
+                'endTime': '2018-05-08T16:30:00Z'
+            }],
+            'webinarTimes': [{
+                'startTime': '2018-02-27T17:00:00Z',
+                'endTime': '2018-02-27T17:30:00Z'
+            }, {
+                'startTime': '2018-03-13T16:00:00Z',
+                'endTime': '2018-03-13T16:30:00Z'
+            }, {
+                'startTime': '2018-03-27T16:00:00Z',
+                'endTime': '2018-03-27T16:30:00Z'
+            }, {
+                'startTime': '2018-04-10T16:00:00Z',
+                'endTime': '2018-04-10T16:30:00Z'
+            }, {
+                'startTime': '2018-04-24T16:00:00Z',
+                'endTime': '2018-04-24T16:30:00Z'
+            }, {
+                'startTime': '2018-05-08T16:00:00Z',
+                'endTime': '2018-05-08T16:30:00Z'
+            }],
+            'timeZone': 'America/Denver',
+            'locale': 'en_US',
+            'status': 'NEW',
+            'approvalType': 'AUTOMATIC',
+            'registrationUrl': 'https://attendee.gotowebinar.com/register/3550359718746839811',
+            'impromptu': False,
+            'isPasswordProtected': False,
+            'type': 'sequence',
+            'registrationSettingsKey': '12526402'
+        }]
+    },
+    'page': {
+        'size': 10,
+        'totalElements': 2,
+        'totalPages': 1,
+        'number': 0
+    }
+}

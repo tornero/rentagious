@@ -1,0 +1,152 @@
+
+<div class="row">
+    <div class="col-md-3">
+        <ul class="sidebar-list">
+            <li class="btn btn-primary wide"><%= link_to "Your Listings", items_path, class: "sidebar-link" %></li>
+            <li class="btn btn-primary wide"><%= link_to "Reservations for Your Items", your_reservations_path, class: "sidebar-link" %></li>
+            <li class="btn btn-primary wide"><%= link_to "Your Rental History", your_rental_history_path, class: "sidebar-link" %></li>
+        </ul>
+    </div>
+    
+    <div class="col-md-9">
+        <div class="panel panel-default">
+        <div class="panel-heading">
+            List your stuff
+        </div>
+        <div class="panel-body">
+            <div class="container">
+                
+                <%= form_for @item, html: {multipart: true} do |f| %>
+                    <% if current_user == @item.user %>
+                        <div class="row">
+                            <div class="col-md-6 select">
+                                <div class="form-group"> 
+                                    <label>*Category</label>
+                                    <%= f.collection_select :category, Category.all, :name, :name, include_blank: false, prompt: "Select...", class: "form-control" %>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 select">
+                                <div class="form-group"> 
+                                    <label>*Sub-Category</label>
+                                    <%= f.grouped_collection_select :subcategory,  Category.order(:name), :subcategories, :name, :name, :name, include_blank: false, prompt: "Select...", class: "form-control" %>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group"> 
+                                    <label>*Listing Name</label>
+                                    <%= f.text_field :listing_name, placeholder: "Listing Name", class: "form-control" %>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group"> 
+                                    <label>*Summary</label>
+                                    <%= f.text_area :summary, rows: 5, placeholder: "Tell us about your item", class: "form-control" %>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group"> 
+                                    <label>Street Address</label>
+                                    <%= f.text_field :address_street, placeholder: "Street Number & Name", class: "form-control" %>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group"> 
+                                    <label>*City</label>
+                                    <%= f.text_field :address_city, placeholder: "City", class: "form-control" %>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group"> 
+                                    <label>*State</label>
+                                    <%= f.text_field :address_state, placeholder: "State (2-letter abbreviation)", class: "form-control" %>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group"> 
+                                    <label>*ZIP</label>
+                                    <%= f.text_field :address_zip, placeholder: "5-digit ZIP code", class: "form-control" %>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group"> 
+                                    <label>*Daily Price</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">$</div>
+                                        <%= f.text_field :price, placeholder: "50", class: "form-control" %>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group"> 
+                                    <label>*Deposit Amount</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">$</div>
+                                        <%= f.text_field :deposit, placeholder: "500", class: "form-control" %>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="btn btn-default btn-file"> 
+                                        <i class = "fa fa-cloud-upload fa-lg"></i> Upload Photos
+                                        <%= file_field_tag "images[]", type: :file, multiple: true %>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="photos"><%= render 'photos/list' %></div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group"> 
+                                    <%= f.check_box :active %> Active Listing
+                                </div>  
+                            </div>
+                        </div>
+
+                        <div class="actions">
+                            <%= f.submit "Save", class: "btn btn-primary" %>
+                        </div>
+                    <% else %>
+                        You are not the owner of this item. 
+                    <% end %>
+
+                <% end %>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    
+</div>

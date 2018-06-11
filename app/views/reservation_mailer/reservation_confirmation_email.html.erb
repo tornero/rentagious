@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for your reservation, <%= @reservation.user.fullname %></h1>
+    <p>
+      You have successfully booked this item: <%= @reservation.item.listing_name %>,
+      from your neighbor <%= @reservation.item.user.email %>.<br>
+    </p>
+    <p>
+      To view the full details, just follow this link: <%= @url %>
+    </p>
+    <p>Enjoy!</p>
+  </body>
+</html>

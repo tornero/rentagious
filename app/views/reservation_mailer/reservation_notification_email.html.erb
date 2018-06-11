@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Congrats, <%= @reservation.item.user.fullname %>!</h1>
+    <p>
+      Your <%= @reservation.item.listing_name %> was just booked
+      by your neighbor <%= @reservation.user.fullname %>.<br>
+    </p>
+    <p>
+      To view the full details, just follow this link: <%= @url %>
+    </p>
+    <p>Enjoy!</p>
+  </body>
+</html>

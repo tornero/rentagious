@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>It's mail time, <%= @message.recipientFullName %>!</h1>
+    <p>
+      <%= @message.user.fullname %> just sent you a message on Rentagious.com! 
+    </p>
+    <p>
+      Message:<br>
+      <i><%= @message.content %></i>
+    </p>
+    <p>
+      To view the full conversation and reply, follow this link: <%= @url %>
+    </p>
+    <p>Thanks!<br>
+      The Rentagious Team
+    </p>
+  </body>
+</html>

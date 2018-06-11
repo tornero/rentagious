@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: MyString
+  subcategory: MyString
+  listing_name: MyString
+  summary: MyText
+  address_streeet: MyString
+  address_city: MyString
+  address_state: MyString
+  address_zip: MyString
+  price: 1
+  active: false
+  user_id: 
+
+two:
+  category: MyString
+  subcategory: MyString
+  listing_name: MyString
+  summary: MyText
+  address_streeet: MyString
+  address_city: MyString
+  address_state: MyString
+  address_zip: MyString
+  price: 1
+  active: false
+  user_id: 
